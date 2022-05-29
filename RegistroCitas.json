@@ -1,0 +1,23 @@
+[
+  
+  {
+    "FechaCita": "2022-05-15T00:00:00",
+    "ListaCitas": [
+      {
+        "NitPaceinte": "1",
+        "horaInicio": "1",
+        "horaFinal": "1"
+      }
+    ]
+  },
+  {
+    "FechaCita": "2022-05-16T00:00:00",
+    "ListaCitas": [
+      {
+        "NitPaceinte": "2",
+        "horaInicio": "2",
+        "horaFinal": "2"
+      }
+    ]
+  }
+]

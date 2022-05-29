@@ -1,0 +1,26 @@
+[
+  {
+    "Nit": "1",
+    "Nombre": "n1",
+    "Apellido": "a1",
+    "Direccion": "d1",
+    "FechaNacimiento": "2022-05-03T00:00:00",
+    "Telefono": "123456"
+  },
+  {
+    "Nit": "2",
+    "Nombre": "n2",
+    "Apellido": "a2",
+    "Direccion": "d2",
+    "FechaNacimiento": "2022-05-03T00:00:00",
+    "Telefono": "123456"
+  },
+  {
+    "Nit": "3",
+    "Nombre": "n3",
+    "Apellido": "a3",
+    "Direccion": "12349876",
+    "FechaNacimiento": "2022-05-12T00:00:00",
+    "Telefono": "12345678"
+  }
+]

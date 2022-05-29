@@ -1,0 +1,3 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Master2.master.cs" Inherits="ProyectoFinalP_PrograIII.Master2" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+</asp:Content>
