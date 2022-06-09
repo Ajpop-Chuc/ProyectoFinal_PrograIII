@@ -1288,6 +1288,7 @@ h6,
 }
 p {
   margin: 0 0 10px;
+    font-size: large;
 }
 .lead {
   margin-bottom: 20px;
@@ -2350,6 +2351,7 @@ pre code {
 }
 table {
   background-color: transparent;
+    font-size: xx-small;
 }
 table col[class*="col-"] {
   position: static;

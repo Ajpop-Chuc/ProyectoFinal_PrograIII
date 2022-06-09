@@ -105,6 +105,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ConsultaNueva.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -127,6 +128,7 @@
     <Content Include="RegistroCitas.aspx" />
     <Content Include="RegistroCitas.json" />
     <Content Include="RegistroPacientes.json" />
+    <Content Include="HisotrialMedico.json" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -166,7 +168,15 @@
     <Compile Include="Agenda.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="ConsultaNueva.aspx.cs">
+      <DependentUpon>ConsultaNueva.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultaNueva.aspx.designer.cs">
+      <DependentUpon>ConsultaNueva.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DatosCita.cs" />
+    <Compile Include="DatosConsultaAux.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
