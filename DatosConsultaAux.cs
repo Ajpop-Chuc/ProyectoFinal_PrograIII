@@ -12,12 +12,18 @@ namespace ProyectoFinalP_PrograIII
         public string horaCita { get; set; }
         public double Temperatura { get; set; }
         public double Presion { get; set; }
-        public string Sintomas { get; set; }
+
+        private List<string> sintomas = new List<string>();
         public string Diagnostico { get; set; }
         public string Tratamiento { get; set; }
-        public string Receta { get; set; }
+
+        private List<RecetaAux> receta = new List<RecetaAux>();
         public DateTime ProxCita { get; set; }
         public string precioConsulta { get; set; }
-        public string ImgenesConsulta { get; set; }
+
+        private List<string> imgenesConsulta = new List<string>();
+        public List<string> Sintomas { get => sintomas; set => sintomas = value; }
+        public List<RecetaAux> Receta { get => receta; set => receta = value; }
+        public List<string> ImgenesConsulta { get => imgenesConsulta; set => imgenesConsulta = value; }
     }
 }
