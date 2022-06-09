@@ -1,0 +1,7 @@
+Creacion de la Clase "CSDatosCita.cs": Se creó para guardar en la lista de tipo Agenda una fecha y dentro una lista que contendra todas las
+citas que se llevaran a cabo en dicha fecha, esto se hará atravez de otra lista de tipo CSDatosCita, la cual contiene como parametros el 
+Nit del paciente, hora de inicio y final de la cita.
+
+Creación Master2: Creado para aislar los procesos de administracion y médicas. 
+Site.Master: Modulo Admin.
+Master2.Master: Consulta Médica
