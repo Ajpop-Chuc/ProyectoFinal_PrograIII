@@ -122,11 +122,11 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="HistorialMedico.aspx" />
     <Content Include="OpcionesPaciente.aspx" />
     <Content Include="RegistroCitas.aspx" />
     <Content Include="RegistroCitas.json" />
     <Content Include="RegistroPacientes.json" />
-    <Content Include="Master2.master" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -177,14 +177,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="historialPaciente.cs" />
-    <Compile Include="Master2.master.cs">
-      <DependentUpon>Master2.master</DependentUpon>
+    <Compile Include="HistorialMedico.aspx.cs">
+      <DependentUpon>HistorialMedico.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Master2.master.designer.cs">
-      <DependentUpon>Master2.master</DependentUpon>
+    <Compile Include="HistorialMedico.aspx.designer.cs">
+      <DependentUpon>HistorialMedico.aspx</DependentUpon>
     </Compile>
+    <Compile Include="historialPaciente.cs" />
     <Compile Include="Medicamentos.cs" />
     <Compile Include="OpcionesPaciente.aspx.cs">
       <DependentUpon>OpcionesPaciente.aspx</DependentUpon>
@@ -217,6 +217,13 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
+    <Compile Include="Site2.Master.cs">
+      <DependentUpon>Site2.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site2.Master.designer.cs">
+      <DependentUpon>Site2.Master</DependentUpon>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -232,6 +239,7 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Site2.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
