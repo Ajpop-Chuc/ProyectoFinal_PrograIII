@@ -123,11 +123,13 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="HistorialMedico.aspx" />
+    <Content Include="OpcionesMedicamento.aspx" />
     <Content Include="OpcionesPaciente.aspx" />
     <Content Include="RegistroCitas.aspx" />
     <Content Include="RegistroCitas.json" />
     <Content Include="RegistroPacientes.json" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Reporte.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -186,6 +188,13 @@
     </Compile>
     <Compile Include="historialPaciente.cs" />
     <Compile Include="Medicamentos.cs" />
+    <Compile Include="OpcionesMedicamento.aspx.cs">
+      <DependentUpon>OpcionesMedicamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OpcionesMedicamento.aspx.designer.cs">
+      <DependentUpon>OpcionesMedicamento.aspx</DependentUpon>
+    </Compile>
     <Compile Include="OpcionesPaciente.aspx.cs">
       <DependentUpon>OpcionesPaciente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -201,6 +210,13 @@
     </Compile>
     <Compile Include="RegistroCitas.aspx.designer.cs">
       <DependentUpon>RegistroCitas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte.aspx.cs">
+      <DependentUpon>Reporte.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporte.aspx.designer.cs">
+      <DependentUpon>Reporte.aspx</DependentUpon>
     </Compile>
     <Compile Include="Sintomas.cs" />
     <Compile Include="Site.Master.cs">
