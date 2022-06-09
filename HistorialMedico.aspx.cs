@@ -7,11 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace ProyectoFinalP_PrograIII
 {
-    public partial class Master2 : System.Web.UI.MasterPage
-    {
-        protected void Page_Load(object sender, EventArgs e)
-        {
+	public partial class HistorialMedico : System.Web.UI.Page
+	{
+		protected void Page_Load(object sender, EventArgs e)
+		{
 
-        }
-    }
+		}
+	}
 }
