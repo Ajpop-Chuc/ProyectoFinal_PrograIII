@@ -11,7 +11,7 @@ namespace ProyectoFinalP_PrograIII
 {
 
 
-    public partial class HistorialMedico
+    public partial class ConsultaNueva
     {
 
         /// <summary>
@@ -33,42 +33,6 @@ namespace ProyectoFinalP_PrograIII
         protected global::System.Web.UI.WebControls.Button ButtonBuscar;
 
         /// <summary>
-        /// Control DropDownListCitas.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownListCitas;
-
-        /// <summary>
-        /// Control ButtonVisualizar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonVisualizar;
-
-        /// <summary>
-        /// Control TextBoxFecha.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxFecha;
-
-        /// <summary>
-        /// Control TextBoxHorario.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxHorario;
-
-        /// <summary>
         /// Control TextBoxTemperatura.
         /// </summary>
         /// <remarks>
@@ -76,6 +40,15 @@ namespace ProyectoFinalP_PrograIII
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBoxTemperatura;
+
+        /// <summary>
+        /// Control Validacion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator Validacion;
 
         /// <summary>
         /// Control TextBoxPresión.
@@ -96,6 +69,15 @@ namespace ProyectoFinalP_PrograIII
         protected global::System.Web.UI.WebControls.GridView GridViewSintomas;
 
         /// <summary>
+        /// Control ButtonAgregarSintoma.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonAgregarSintoma;
+
+        /// <summary>
         /// Control TextBoxDiagnostico.
         /// </summary>
         /// <remarks>
@@ -114,13 +96,40 @@ namespace ProyectoFinalP_PrograIII
         protected global::System.Web.UI.WebControls.TextBox TextBoxTratamiento;
 
         /// <summary>
-        /// Control GridViewReceta.
+        /// Control DropDownListMedicamento.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewReceta;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownListMedicamento;
+
+        /// <summary>
+        /// Control TextBoxDosis.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxDosis;
+
+        /// <summary>
+        /// Control TextBoxHorarioAdmin.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxHorarioAdmin;
+
+        /// <summary>
+        /// Control ButtonAgregarReceta.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonAgregarReceta;
 
         /// <summary>
         /// Control TextBoxCosto.
@@ -132,12 +141,21 @@ namespace ProyectoFinalP_PrograIII
         protected global::System.Web.UI.WebControls.TextBox TextBoxCosto;
 
         /// <summary>
-        /// Control GridViewImagenes.
+        /// Control TextBoxImagen.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewImagenes;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxImagen;
+
+        /// <summary>
+        /// Control ButtonGuardarConsulta.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonGuardarConsulta;
     }
 }
