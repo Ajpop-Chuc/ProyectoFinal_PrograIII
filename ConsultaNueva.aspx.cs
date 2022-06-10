@@ -10,8 +10,8 @@ namespace ProyectoFinalP_PrograIII
 {
     public partial class ConsultaNueva : System.Web.UI.Page
     {
-        static historialPaciente ConsultaPaciente; 
-        static DatosConsultaAux datosConsultaAux= new DatosConsultaAux();
+        static historialPaciente ConsultaPaciente;
+        static DatosConsultaAux datosConsultaAux = new DatosConsultaAux();
         static RecetaAux recetaAux = new RecetaAux();
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -26,12 +26,12 @@ namespace ProyectoFinalP_PrograIII
                 historialPaciente.listaHistorialPciente.Clear();
                 historialPaciente.leerJson(Server.MapPath("HisotrialMedico.json"));
             }
-            
+
         }
 
         protected void ButtonBuscar_Click(object sender, EventArgs e)
         {
-             if (!Pacientes.listaPacientes.Exists(x=>x.Nit==TextBoxNit.Text))
+            if (!Pacientes.listaPacientes.Exists(x => x.Nit == TextBoxNit.Text))
             {
                 Response.Write("<script>alert('Error: Paciente No Registrado...');</script>");
             }
@@ -69,6 +69,11 @@ namespace ProyectoFinalP_PrograIII
         }
         protected void ButtonGuardarConsulta_Click(object sender, EventArgs e)
         {
+            DateTime fecha = DateTime.Now;
+
+            datosConsultaAux.idConsulta = cracionIdCita();
+            datosConsultaAux.fechaConsulta = fecha.Date;
+            datosConsultaAux.horaCita = (fecha.Hour).ToString();
             datosConsultaAux.Temperatura = TextBoxTemperatura.Text;
             datosConsultaAux.Presion = TextBoxPresión.Text;
             //sintomas -> ya
@@ -77,8 +82,9 @@ namespace ProyectoFinalP_PrograIII
             //recetas -> ya
             datosConsultaAux.precioConsulta = Convert.ToDouble(TextBoxCosto.Text);
             string archivo = "~/imagenes/" + FileUploadImagen.FileName;
-            datosConsultaAux.ImgenesConsulta.Add(archivo);
+            datosConsultaAux.imgenesConsulta = archivo;
 
+            ConsultaPaciente.NitPaciente = TextBoxNit.Text;
             ConsultaPaciente.ListaDatosConsulta.Add(datosConsultaAux);
 
             if (historialPaciente.listaHistorialPciente.Find(x => x.NitPaciente == TextBoxNit.Text) == null)
@@ -91,11 +97,11 @@ namespace ProyectoFinalP_PrograIII
             limpiar();
         }
 
-        
-       
+
+
         protected void cargarDDownList()
         {
-            foreach(var x in Sintomas.listaSintomas)
+            foreach (var x in Sintomas.listaSintomas)
             {
                 DropDownListSintomas.Items.Add(x.codigoSintoma);
             }
@@ -111,7 +117,7 @@ namespace ProyectoFinalP_PrograIII
 
         protected void guardarImgen()
         {
-            string archivoOrigen = Path.GetFileName(FileUploadImagen.FileName); 
+            string archivoOrigen = Path.GetFileName(FileUploadImagen.FileName);
             try
             {
                 FileUploadImagen.SaveAs(Server.MapPath("~/imagenes/") + archivoOrigen);
@@ -132,5 +138,35 @@ namespace ProyectoFinalP_PrograIII
             TextBoxCosto.Text = "";
         }
 
+        protected string cracionIdCita()
+        {
+            string ID = "";
+            bool exitencia = true;
+            historialPaciente paciente = new historialPaciente();
+            paciente = historialPaciente.listaHistorialPciente.Find(x => x.NitPaciente==TextBoxNit.Text);
+            if (paciente == null) { paciente = new historialPaciente(); }
+                for (char letra = 'A'; letra <= 'Z'; letra++)
+                {
+                    for (int entero = 1; entero <= 5; entero++)
+                    {
+                        for (int entero2 = 10; entero2 >= 5; entero2--)
+                        {
+                            ID = TextBoxNit+letra.ToString() + entero.ToString() + entero2.ToString();
+
+                            if (paciente.ListaDatosConsulta.Exists(x => x.idConsulta == ID))
+                            { }
+
+                            else { exitencia = false;  break;}
+                        }
+                        if (exitencia == false)
+                        { break; }
+                    }
+                    if (exitencia==false)
+                    { break; }
+                }
+                        
+
+            return ID;
+        }
     }
 }

@@ -8,7 +8,7 @@ namespace ProyectoFinalP_PrograIII
     public class DatosConsultaAux
     {
         public string idConsulta { get; set; }
-        public string fechaConsulta { get; set; }
+        public DateTime fechaConsulta { get; set; }
         public string horaCita { get; set; }
         public string Temperatura { get; set; }
         public string Presion { get; set; }
@@ -21,9 +21,8 @@ namespace ProyectoFinalP_PrograIII
         public DateTime ProxCita { get; set; }
         public double precioConsulta { get; set; }
 
-        private List<string> imgenesConsulta = new List<string>();
+        public string imgenesConsulta { get; set; }
         public List<string> Sintomas { get => sintomas; set => sintomas = value; }
         public List<RecetaAux> Receta { get => receta; set => receta = value; }
-        public List<string> ImgenesConsulta { get => imgenesConsulta; set => imgenesConsulta = value; }
     }
 }
