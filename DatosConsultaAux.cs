@@ -8,7 +8,7 @@ namespace ProyectoFinalP_PrograIII
     public class DatosConsultaAux
     {
         public string idConsulta { get; set; }
-        public string fechaConsulta { get; set; }
+        public DateTime fechaConsulta { get; set; }
         public string horaCita { get; set; }
         public string Temperatura { get; set; }
         public string Presion { get; set; }
