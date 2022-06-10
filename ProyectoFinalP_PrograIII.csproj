@@ -124,6 +124,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="HistorialMedico.aspx" />
+    <Content Include="InicioM2.aspx" />
     <Content Include="OpcionesMedicamento.aspx" />
     <Content Include="OpcionesPaciente.aspx" />
     <Content Include="OpcionesSintoma.aspx" />
@@ -200,6 +201,13 @@
       <DependentUpon>HistorialMedico.aspx</DependentUpon>
     </Compile>
     <Compile Include="historialPaciente.cs" />
+    <Compile Include="InicioM2.aspx.cs">
+      <DependentUpon>InicioM2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InicioM2.aspx.designer.cs">
+      <DependentUpon>InicioM2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Medicamentos.cs" />
     <Compile Include="OpcionesMedicamento.aspx.cs">
       <DependentUpon>OpcionesMedicamento.aspx</DependentUpon>
@@ -271,6 +279,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="imagenes\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

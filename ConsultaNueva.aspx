@@ -2,9 +2,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
          <p class="text-center">
         <br />
-        <span style="font-size: larger; text-align: center; font-weight: 700">_______________ Historial Pacientes _______________</span></p>
+        <span style="font-size: larger; text-align: center; font-weight: 700">_______________ Consulta Nueva _______________</span></p>
     <p>
-        <span style="font-size: large"><strong><em>Nit Paciente</em>&nbsp;</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+        <span style="font-size: large"><strong><em>&nbsp;&nbsp;&nbsp; Nit Paciente</em>&nbsp;</strong>&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="TextBoxNit" runat="server" style="font-size: large" Width="134px"></asp:TextBox>
         &nbsp;<asp:Button ID="ButtonBuscar" runat="server" Text="Buscar" OnClick="ButtonBuscar_Click" />
         </span>
@@ -15,7 +15,7 @@
         <li style="font-weight: 700"><em>Temperatura:&nbsp;
             <asp:TextBox ID="TextBoxTemperatura" runat="server"></asp:TextBox>
             </em>&nbsp;<span style="font-weight: normal"><em>[°F]
-            <asp:RequiredFieldValidator ID="Validacion" runat="server" ControlToValidate="TextBoxTemperatura" Enabled="False" ErrorMessage="Campo Requerido"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="Validacion1" runat="server" ControlToValidate="TextBoxTemperatura" Enabled="False" ErrorMessage="Campo Requerido" BackColor="#CC0000" ForeColor="White"></asp:RequiredFieldValidator>
             </em>
             </span>
         </li>
@@ -24,23 +24,15 @@
             &nbsp;
             </em>
             </strong>
-            <em>[ml-Mercurío] </em>
+            <em>[ml-Mercurío]&nbsp; <span style="font-weight: normal">
+            <asp:RequiredFieldValidator ID="Validacion2" runat="server" ControlToValidate="TextBoxPresión" Enabled="False" ErrorMessage="Campo Requerido" BackColor="#CC0000" ForeColor="White"></asp:RequiredFieldValidator>
+            </span>
+            </em>
         </li>
-        <li><strong><em>Síntomas:&nbsp; </em> </strong><em><asp:GridView ID="GridViewSintomas" runat="server" Height="116px" Width="278px" AutoGenerateColumns="False">
-            <Columns>
-                <asp:TemplateField>
-                    <EditItemTemplate>
-                        <asp:CheckBox ID="CheckBox1" runat="server" />
-                    </EditItemTemplate>
-                    <ItemTemplate>
-                        <asp:CheckBox ID="CheckBox1" runat="server" />
-                    </ItemTemplate>
-                </asp:TemplateField>
-                <asp:BoundField HeaderText="Sintoma " />
-            </Columns>
-            </asp:GridView>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="ButtonAgregarSintoma" runat="server" Text="Agregar Sintoma" Visible="False" />
+        <li><strong><em>Síntomas:&nbsp; </em> </strong><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:DropDownList ID="DropDownListSintomas" runat="server" Height="16px" Width="124px">
+            </asp:DropDownList>
+&nbsp;<asp:Button ID="ButtonAgregarSintoma" runat="server" Text="Agregar Sintoma" Visible="False" OnClick="ButtonAgregarSintoma_Click" />
             </em>
         </li>
         <li><strong><em>Diagnóstico:&nbsp;</em></strong></li>
@@ -66,26 +58,31 @@
          <ul>
              <li><strong><em>Receta:</em></strong><ul>
                  <li><em>Medicamento: </em> <strong><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                     <asp:DropDownList ID="DropDownListMedicamento" runat="server">
+                     <asp:DropDownList ID="DropDownListMedicamento" runat="server" OnSelectedIndexChanged="DropDownListMedicamento_SelectedIndexChanged" ValidateRequestMode="Disabled" Width="121px">
                      </asp:DropDownList>
                      </em>
                      </strong></li>
                  <li><em>Dosis:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="TextBoxDosis" runat="server"></asp:TextBox>
-&nbsp;[mlg]</em></li>
+&nbsp;[mlg] </em></li>
                  <li><em>Administración Cada: <asp:TextBox ID="TextBoxHorarioAdmin" runat="server"></asp:TextBox>
-&nbsp;[Horas]
-                     <asp:Button ID="ButtonAgregarReceta" runat="server" Text="Agregar" Visible="False" />
+&nbsp;[Horas]&nbsp;&nbsp;&nbsp;
+                     <asp:Button ID="ButtonAgregarReceta" runat="server" Text="Agregar" Visible="False" OnClick="ButtonAgregarReceta_Click" />
                      </em>
                  </li>
                  </ul>
              </li>
              <li><strong><em>Costo de la consulta:
             </em>
-            </strong><em>&nbsp;
+            </strong><em>&nbsp;&nbsp;
                  <asp:TextBox ID="TextBoxCosto" runat="server" Width="116px"></asp:TextBox>
-&nbsp; [Quetzales] </em></li>
-             <li style="font-weight: 700"><em>Imagenes:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="TextBoxImagen" runat="server"></asp:TextBox>
-                 </em>&nbsp;<span style="font-weight: normal"><em>[Nombre Img]</em></span></li>
+&nbsp; [Quetzales]&nbsp; <strong>
+                 <span style="font-weight: normal">
+            <asp:RequiredFieldValidator ID="Validacion3" runat="server" ControlToValidate="TextBoxTemperatura" Enabled="False" ErrorMessage="Campo Requerido" BackColor="#CC0000" ForeColor="White" style="font-size: x-small"></asp:RequiredFieldValidator>
+            </span>
+    </strong>
+                 </em></li>
+             <li style="font-weight: 700"><em>Imagenes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:FileUpload ID="FileUploadImagen" runat="server" />
+                 </em></li>
          </ul>
     <p>
         <em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

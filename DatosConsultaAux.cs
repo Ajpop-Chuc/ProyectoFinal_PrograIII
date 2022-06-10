@@ -10,8 +10,8 @@ namespace ProyectoFinalP_PrograIII
         public string idConsulta { get; set; }
         public string fechaConsulta { get; set; }
         public string horaCita { get; set; }
-        public double Temperatura { get; set; }
-        public double Presion { get; set; }
+        public string Temperatura { get; set; }
+        public string Presion { get; set; }
 
         private List<string> sintomas = new List<string>();
         public string Diagnostico { get; set; }
@@ -19,7 +19,7 @@ namespace ProyectoFinalP_PrograIII
 
         private List<RecetaAux> receta = new List<RecetaAux>();
         public DateTime ProxCita { get; set; }
-        public string precioConsulta { get; set; }
+        public double precioConsulta { get; set; }
 
         private List<string> imgenesConsulta = new List<string>();
         public List<string> Sintomas { get => sintomas; set => sintomas = value; }
