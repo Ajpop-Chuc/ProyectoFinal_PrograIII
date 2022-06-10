@@ -1,72 +1,56 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="HistorialMedico.aspx.cs" Inherits="ProyectoFinalP_PrograIII.HistorialMedico" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-     <p class="text-center">
+     <p>
         <br />
-        <span style="font-size: larger; text-align: center; font-weight: 700">_______________ Historial Pacientes _______________</span></p>
+        <span style="font-size: large; text-align: center; font-weight: 700">_____ Historial Pacientes _____</span></p>
     <p>
-        <span style="font-size: large"><strong>Nit Paciente&nbsp;</strong>&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="TextBoxNit" runat="server" style="font-size: large" Width="134px"></asp:TextBox>
-        &nbsp;<asp:Button ID="ButtonBuscar" runat="server" Text="Buscar" />
+        <span style="font-size: large">Nit Paciente&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="ButtonBuscar" runat="server" Text="Buscar" />
         </span>
     </p>
     <p>
-        <span style="font-size: large"><strong>Citas Previas</strong>&nbsp;&nbsp;&nbsp; </span>
-        <asp:DropDownList ID="DropDownListCitas" runat="server" style="font-size: large">
+        <span style="font-size: large">Citas Previas&nbsp;&nbsp;&nbsp; </span>
+        <asp:DropDownList ID="DropDownList2" runat="server" style="font-size: large">
         </asp:DropDownList>
-        &nbsp;<asp:Button ID="ButtonVisualizar" runat="server" Text="VER" />
+        <span style="font-size: large">&nbsp;&nbsp;&nbsp;&nbsp; </span>&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="ButtonVisualizar" runat="server" Text="VER" />
     </p>
-     <p class="text-center" style="font-size: x-large">
-         <strong>Datos de la Cita</strong></p>
     <ul>
-        <li style="font-weight: 700">Fecha:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-            <asp:TextBox ID="TextBoxFecha" runat="server" Enabled="False"></asp:TextBox>
+        <li>Fecha:&nbsp;
+            <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
 &nbsp;Horario:&nbsp;
-            <asp:TextBox ID="TextBoxHorario" runat="server" Enabled="False"></asp:TextBox>
+            <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
         </li>
-        <li style="font-weight: 700">Temperatura:&nbsp;
-            <asp:TextBox ID="TextBoxTemperatura" runat="server" Enabled="False"></asp:TextBox>
+        <li>Temperatura:
+            <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
         </li>
-        <li><strong>Presión:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBoxPresión" runat="server" Enabled="False"></asp:TextBox>
-            </strong>
+        <li>Presión:
+            <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
         </li>
-        <li><strong>Síntomas:&nbsp; </strong><asp:GridView ID="GridViewSintomas" runat="server" Height="116px" Width="278px">
+        <li>Síntomas:<asp:GridView ID="GridView1" runat="server">
             </asp:GridView>
         </li>
-        <li><strong>Diagnóstico:&nbsp;</strong></li>
-    </ul>
-<p>
-    <strong>&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:TextBox ID="TextBoxDiagnostico" runat="server" Enabled="False" Height="116px" TextMode="MultiLine" Width="278px"></asp:TextBox>
-    </strong>
-</p>
-<ul>
-        <li><strong>Tratamiento:&nbsp;
-            </strong></li>
-    </ul>
-<p>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>
-    <asp:TextBox ID="TextBoxTratamiento" runat="server" Enabled="False" Height="116px" TextMode="MultiLine" Width="278px"></asp:TextBox>
-    </strong>
-</p>
-<ul>
-        <li><strong>Receta:
-            </strong>
-            <asp:GridView ID="GridViewReceta" runat="server" Height="116px" Width="278px">
+        <li>Diagnóstico:&nbsp;
+            <textarea id="TextArea1" cols="20" name="S1" rows="2"></textarea></li>
+        <li>Tratamiento:
+            <textarea id="TextArea2" cols="20" name="S2" rows="2"></textarea></li>
+        <li>Receta:
+            <asp:GridView ID="GridView2" runat="server">
             </asp:GridView>
         </li>
-        <li><strong>Costo de la consulta:
-            </strong>&nbsp;<asp:TextBox ID="TextBoxCosto" runat="server" Enabled="False" Width="116px"></asp:TextBox>
-        </li>
-        <li style="font-weight: 700"><span style="font-weight: normal">.</span><asp:GridView ID="GridViewImagenes" runat="server" AutoGenerateColumns="False" Width="278px">
-            <Columns>
-                <asp:ImageField HeaderText="Imagen">
-                </asp:ImageField>
-                <asp:BoundField HeaderText="Descripcion" />
-            </Columns>
+        <li>Costo de la consulta:
+            <asp:TextBox ID="TextBox6" runat="server" OnTextChanged="TextBox6_TextChanged"></asp:TextBox>
+&nbsp;<asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="GridView3_SelectedIndexChanged">
+                <Columns>
+                    <asp:ImageField HeaderText="Imagen">
+                    </asp:ImageField>
+                    <asp:BoundField HeaderText="Descripcion " />
+                </Columns>
             </asp:GridView>
         </li>
     </ul>
     <p>
-        &nbsp;</p>
+    </p>
 </asp:Content>

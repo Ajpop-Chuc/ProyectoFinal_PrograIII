@@ -118,9 +118,8 @@ optgroup,
 select,
 textarea {
   color: inherit;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
+  font: inherit;
+  margin: 0;
 }
 button {
   overflow: visible;
@@ -135,7 +134,6 @@ input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
-    font-weight: 700;
 }
 button[disabled],
 html input[disabled] {
@@ -1095,7 +1093,7 @@ button,
 select,
 textarea {
   font-family: inherit;
-  font-size: x-small;
+  font-size: xx-small;
   line-height: inherit;
 }
 a {
@@ -1290,7 +1288,6 @@ h6,
 }
 p {
   margin: 0 0 10px;
-    font-size: large;
 }
 .lead {
   margin-bottom: 20px;
@@ -2353,7 +2350,6 @@ pre code {
 }
 table {
   background-color: transparent;
-    font-size: xx-small;
 }
 table col[class*="col-"] {
   position: static;

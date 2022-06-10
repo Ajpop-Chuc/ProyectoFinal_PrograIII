@@ -11,12 +11,7 @@ namespace ProyectoFinalP_PrograIII
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			
+
 		}
-
-        protected void ButtonBuscar_Click(object sender, EventArgs e)
-        {
-
-        }
-    }
+	}
 }
