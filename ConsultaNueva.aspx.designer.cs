@@ -42,13 +42,13 @@ namespace ProyectoFinalP_PrograIII
         protected global::System.Web.UI.WebControls.TextBox TextBoxTemperatura;
 
         /// <summary>
-        /// Control Validacion.
+        /// Control Validacion1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator Validacion;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator Validacion1;
 
         /// <summary>
         /// Control TextBoxPresión.
@@ -60,13 +60,22 @@ namespace ProyectoFinalP_PrograIII
         protected global::System.Web.UI.WebControls.TextBox TextBoxPresión;
 
         /// <summary>
-        /// Control GridViewSintomas.
+        /// Control Validacion2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewSintomas;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator Validacion2;
+
+        /// <summary>
+        /// Control DropDownListSintomas.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownListSintomas;
 
         /// <summary>
         /// Control ButtonAgregarSintoma.
@@ -141,13 +150,22 @@ namespace ProyectoFinalP_PrograIII
         protected global::System.Web.UI.WebControls.TextBox TextBoxCosto;
 
         /// <summary>
-        /// Control TextBoxImagen.
+        /// Control Validacion3.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxImagen;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator Validacion3;
+
+        /// <summary>
+        /// Control FileUploadImagen.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload FileUploadImagen;
 
         /// <summary>
         /// Control ButtonGuardarConsulta.
