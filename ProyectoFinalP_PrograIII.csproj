@@ -127,6 +127,7 @@
     <Content Include="InicioM2.aspx" />
     <Content Include="OpcionesMedicamento.aspx" />
     <Content Include="OpcionesPaciente.aspx" />
+    <Content Include="OpcionesSintoma.aspx" />
     <Content Include="RegistroCitas.aspx" />
     <Content Include="RegistroCitas.json" />
     <Content Include="RegistroPacientes.json" />
@@ -221,6 +222,13 @@
     </Compile>
     <Compile Include="OpcionesPaciente.aspx.designer.cs">
       <DependentUpon>OpcionesPaciente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OpcionesSintoma.aspx.cs">
+      <DependentUpon>OpcionesSintoma.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OpcionesSintoma.aspx.designer.cs">
+      <DependentUpon>OpcionesSintoma.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pacientes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
