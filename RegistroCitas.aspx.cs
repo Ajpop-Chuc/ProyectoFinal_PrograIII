@@ -83,7 +83,7 @@ namespace ProyectoFinalP_PrograIII
 
         protected void ButtonEliminar_Click(object sender, EventArgs e)
         {
-            Agenda fecha = Agenda.listaAgenda.Find(x => x.FechaCita == Convert.ToDateTime(DropDownList1.Text));
+            Agenda fecha = Agenda.listaAgenda.Find(x => x.FechaCita == Convert.ToDateTime(Calendar1.SelectedDate));
             int posicion = fecha.ListaCitas.FindIndex(x => x.NitPaceinte == DropDownListNit.Text);
 
             fecha.ListaCitas.RemoveAt(posicion);
@@ -115,16 +115,45 @@ namespace ProyectoFinalP_PrograIII
                     }
                     
                     
-                }
-                
+                }  
+            }
+        }
 
-                
+        protected void ValidacionHorarioEliminado()
+        {
+            DropDownListHorarioCita.Items.Clear();
+            for (int horario = 8; horario <= 15; horario++)
+            {
+                string hora = horario.ToString() + " - " + (horario + 1).ToString();
+
+                ConsultaAgenda = Agenda.listaAgenda.Find(x => x.FechaCita == Calendar1.SelectedDate);
+                if (ConsultaAgenda == null)
+                {
+                    Response.Write("<script>alert('Cita Eliminanda Correctamente')</script>");
+                }
+                else
+                {
+
+                    if (ConsultaAgenda.ListaCitas.Exists(x => x.horarioConsulta == hora))
+                    {
+                        DropDownListHorarioCita.Items.Add(hora);
+                    }
+                }
             }
         }
 
         protected void Calendar1_SelectionChanged(object sender, EventArgs e)
         {
-            ValidacionHorario();
+            
+
+            if (Menu1.SelectedItem == Menu1.Items[0])
+            {
+                ValidacionHorario();
+            }
+            else if (Menu1.SelectedItem == Menu1.Items[1])
+            {
+                ValidacionHorarioEliminado();
+            }
         }
     }
 }

@@ -18,9 +18,9 @@
     </asp:DropDownList>
     <asp:Button ID="ButtonBuscar" runat="server" OnClick="ButtonBuscar_Click" style="font-size: xx-small" Text="Buscar" Visible="False" />
     <span style="font-size: xx-small">&nbsp; </span>&nbsp;&nbsp;&nbsp;
-    <asp:DropDownList ID="DropDownList1" runat="server">
+    <asp:DropDownList ID="DropDownList1" runat="server" Visible="False">
     </asp:DropDownList>
-&nbsp;<asp:Label ID="Label1" runat="server" Text="Horario"></asp:Label>
+&nbsp;<asp:Label ID="Label1" runat="server" Text="Horario" Visible="False"></asp:Label>
     <p class="text-left" style="font-size: large">
         <strong>Datos Cita</strong>
     </p>
