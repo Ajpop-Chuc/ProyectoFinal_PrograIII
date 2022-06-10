@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h1 class="text-center">
         <br />
-        __________<strong><em>Agregar o eliminar Medicamento__________</em></strong></h1>
+        __________<strong><em>Agregar/Actualizar Medicamento__________</em></strong></h1>
     <ul>
         <li><strong><span style="font-size: large">Codigo Medicamento</span></strong>&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="TextBoxCodigoMedicamento" runat="server"></asp:TextBox>
@@ -11,11 +11,17 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Button ID="ButtonBuscarMedicamento" runat="server" OnClick="ButtonBuscarMedicamento_Click" Text="Buscar" />
         </li>
-        <li></li>
+    </ul>
+<p>
+    &nbsp;</p>
+<ul>
         <li><strong><span style="font-size: large">Ingrediente Generico</span></strong>&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="TextBoxIngredienteGenerico" runat="server"></asp:TextBox>
         </li>
-        <li></li>
+    </ul>
+<p>
+    &nbsp;</p>
+<ul>
         <li><strong><span style="font-size: large">Laboratorio </span></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="TextBoxLaboratorio" runat="server"></asp:TextBox>
         </li>

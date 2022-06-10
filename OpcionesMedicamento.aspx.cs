@@ -14,7 +14,7 @@ namespace ProyectoFinalP_PrograIII
         {
             if (!IsPostBack)
             {
-                archivo = Server.MapPath("RegistroMedicamentos.json");
+                archivo = Server.MapPath("DatosMedicamentos.json");
                 Medicamentos.listaMedicamentos.Clear();
                 Medicamentos.leerJson(archivo);
             }
@@ -30,6 +30,8 @@ namespace ProyectoFinalP_PrograIII
             Medicamentos.listaMedicamentos.Add(medicamento);
             Response.Write("<script>alert('Medicamento Ingresado Correctamente')</script>");
             Medicamentos.guardarenJson(archivo);
+            Limpiar();
+
         }
 
         protected void ButtonBuscarMedicamento_Click(object sender, EventArgs e)
@@ -58,6 +60,14 @@ namespace ProyectoFinalP_PrograIII
             medicamento.Laboratorio = TextBoxLaboratorio.Text;
             Response.Write("<script>alert('Medicamento Actualizado Correctamente')</script>");
             Medicamentos.guardarenJson(archivo);
+            Limpiar();
+        }
+
+        protected void Limpiar()
+        {
+            TextBoxCodigoMedicamento.Text = "";
+            TextBoxIngredienteGenerico.Text = "";
+            TextBoxLaboratorio.Text = "";
         }
     }
 }
