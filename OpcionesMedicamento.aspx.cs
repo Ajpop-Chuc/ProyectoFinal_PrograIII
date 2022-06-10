@@ -49,6 +49,7 @@ namespace ProyectoFinalP_PrograIII
             {
                 Response.Write("<script>alert('Medicamento No Ingresado ')</script>");
             }
+            TextBoxCodigoMedicamento.Enabled = false;
         }
 
         protected void ButtonActualizarMedicamento_Click(object sender, EventArgs e)
@@ -68,6 +69,24 @@ namespace ProyectoFinalP_PrograIII
             TextBoxCodigoMedicamento.Text = "";
             TextBoxIngredienteGenerico.Text = "";
             TextBoxLaboratorio.Text = "";
+        }
+
+        protected void Menu1_MenuItemClick(object sender, MenuEventArgs e)
+        {
+            if (Menu1.SelectedItem == Menu1.Items[0])
+            {
+                TextBoxCodigoMedicamento.Enabled = true;
+                ButtonBuscarMedicamento.Visible = false;
+                ButtonActualizarMedicamento.Visible = false;
+                ButtonAgregarMedicamento.Visible = true;
+            }
+            else if (Menu1.SelectedItem == Menu1.Items[1])
+            {
+                TextBoxCodigoMedicamento.Enabled = true;
+                ButtonBuscarMedicamento.Visible = true;
+                ButtonActualizarMedicamento.Visible = true;
+                ButtonAgregarMedicamento.Visible = false;
+            }
         }
     }
 }
