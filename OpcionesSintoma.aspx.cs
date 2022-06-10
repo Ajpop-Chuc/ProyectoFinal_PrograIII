@@ -42,7 +42,7 @@ namespace ProyectoFinalP_PrograIII
             }
             else
             {
-                Response.Write("<script>alert('Medicamento No Ingresado ')</script>");
+                Response.Write("<script>alert('Sintoma No Ingresado ')</script>");
             }
         }
 
@@ -60,6 +60,22 @@ namespace ProyectoFinalP_PrograIII
         {
             TextBoxCodigoSintoma.Text = "";
             TextBoxDescripcionSintoma.Text = "";
+        }
+
+        protected void Menu1_MenuItemClick(object sender, MenuEventArgs e)
+        {
+            if (Menu1.SelectedItem == Menu1.Items[0])
+            {
+                ButtonBuscarSintoma.Visible = false;
+                ButtonActualizarSintoma.Visible = false;
+                ButtonAgregarSintoma.Visible = true;
+            }
+            else if (Menu1.SelectedItem == Menu1.Items[1])
+            {
+                ButtonBuscarSintoma.Visible = true;
+                ButtonActualizarSintoma.Visible = true;
+                ButtonAgregarSintoma.Visible = false;
+            }
         }
     }
 }
