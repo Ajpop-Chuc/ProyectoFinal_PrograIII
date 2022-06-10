@@ -9,6 +9,7 @@ namespace ProyectoFinalP_PrograIII
 {
     public partial class RegistroCitas : System.Web.UI.Page
     {
+        static Agenda ConsultaAgenda;
         static string archivo;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -17,6 +18,7 @@ namespace ProyectoFinalP_PrograIII
                 archivo = Server.MapPath("RegistroCitas.json");
                 Agenda.listaAgenda.Clear();
                 Agenda.leerJson(archivo);
+                
 
                 Pacientes.listaPacientes.Clear();
                 Pacientes.leerJson(Server.MapPath("RegistroPacientes.json"));
@@ -24,7 +26,9 @@ namespace ProyectoFinalP_PrograIII
                 {
                     DropDownListNit.Items.Add(x.Nit);
                 }
+
             }
+            
         }
 
         protected void Menu1_MenuItemClick(object sender, MenuEventArgs e)
@@ -50,15 +54,16 @@ namespace ProyectoFinalP_PrograIII
             if (agenda == null) { agenda = new Agenda(); }
 
             datos.NitPaceinte = DropDownListNit.Text;
-            datos.horaInicio = TextBoxHInicio.Text;
-            datos.horaFinal = TextBoxHFinalizacion.Text;
+            datos.horarioConsulta = DropDownListHorarioCita.Text;
 
             agenda.FechaCita = Calendar1.SelectedDate;
             agenda.ListaCitas.Add(datos);
 
             if (Agenda.listaAgenda.Find(x => x.FechaCita == Calendar1.SelectedDate) == null) { Agenda.listaAgenda.Add(agenda); }
-
+            Response.Write("<script>alert('Cita Agendada Correctamente')</script>");
             Agenda.guardarenJson(archivo);
+            ValidacionHorario();
+            
         }
 
         protected void ButtonBuscar_Click(object sender, EventArgs e)
@@ -74,15 +79,81 @@ namespace ProyectoFinalP_PrograIII
                     }
                 }
             }
-        }//+" Horario:"+i.horaInicio+"-"+i.horaFinal
+        }
 
         protected void ButtonEliminar_Click(object sender, EventArgs e)
         {
-            Agenda fecha = Agenda.listaAgenda.Find(x => x.FechaCita == Convert.ToDateTime(DropDownList1.Text));
+            Agenda fecha = Agenda.listaAgenda.Find(x => x.FechaCita == Convert.ToDateTime(Calendar1.SelectedDate));
             int posicion = fecha.ListaCitas.FindIndex(x => x.NitPaceinte == DropDownListNit.Text);
 
             fecha.ListaCitas.RemoveAt(posicion);
+            Response.Write("<script>alert('Cita Eliminanda Correctamente')</script>");
             Agenda.guardarenJson(archivo);
+        }
+
+        protected void ValidacionHorario()
+        {
+            DropDownListHorarioCita.Items.Clear();
+            for (int horario= 8; horario<=15; horario++)
+            {
+                string hora = horario.ToString() + " - " + (horario + 1).ToString();
+
+                ConsultaAgenda = Agenda.listaAgenda.Find(x => x.FechaCita == Calendar1.SelectedDate);
+                if (ConsultaAgenda == null)
+                {
+                    DropDownListHorarioCita.Items.Add(hora);
+                }
+                else
+                {
+                    
+                    if (ConsultaAgenda.ListaCitas.Exists(x => x.horarioConsulta == hora)) 
+                    {
+                    }
+                    else
+                    {
+                        DropDownListHorarioCita.Items.Add(hora);
+                    }
+                    
+                    
+                }  
+            }
+        }
+
+        protected void ValidacionHorarioEliminado()
+        {
+            DropDownListHorarioCita.Items.Clear();
+            for (int horario = 8; horario <= 15; horario++)
+            {
+                string hora = horario.ToString() + " - " + (horario + 1).ToString();
+
+                ConsultaAgenda = Agenda.listaAgenda.Find(x => x.FechaCita == Calendar1.SelectedDate);
+                if (ConsultaAgenda == null)
+                {
+                    Response.Write("<script>alert('Cita Eliminanda Correctamente')</script>");
+                }
+                else
+                {
+
+                    if (ConsultaAgenda.ListaCitas.Exists(x => x.horarioConsulta == hora))
+                    {
+                        DropDownListHorarioCita.Items.Add(hora);
+                    }
+                }
+            }
+        }
+
+        protected void Calendar1_SelectionChanged(object sender, EventArgs e)
+        {
+            
+
+            if (Menu1.SelectedItem == Menu1.Items[0])
+            {
+                ValidacionHorario();
+            }
+            else if (Menu1.SelectedItem == Menu1.Items[1])
+            {
+                ValidacionHorarioEliminado();
+            }
         }
     }
 }

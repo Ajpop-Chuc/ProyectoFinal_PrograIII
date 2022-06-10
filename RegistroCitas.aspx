@@ -18,15 +18,15 @@
     </asp:DropDownList>
     <asp:Button ID="ButtonBuscar" runat="server" OnClick="ButtonBuscar_Click" style="font-size: xx-small" Text="Buscar" Visible="False" />
     <span style="font-size: xx-small">&nbsp; </span>&nbsp;&nbsp;&nbsp;
-    <asp:DropDownList ID="DropDownList1" runat="server">
+    <asp:DropDownList ID="DropDownList1" runat="server" Visible="False">
     </asp:DropDownList>
-&nbsp;<asp:Label ID="Label1" runat="server" Text="Horario"></asp:Label>
+&nbsp;<asp:Label ID="Label1" runat="server" Text="Horario" Visible="False"></asp:Label>
     <p class="text-left" style="font-size: large">
         <strong>Datos Cita</strong>
     </p>
     <p style="font-size: large">
         Fecha&nbsp;
-        <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="Black" DayNameFormat="Shortest" Font-Names="Times New Roman" Font-Size="10pt" ForeColor="Black" Height="189px" NextPrevFormat="FullMonth" TitleFormat="Month" Width="369px">
+        <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="Black" DayNameFormat="Shortest" Font-Names="Times New Roman" Font-Size="10pt" ForeColor="Black" Height="189px" NextPrevFormat="FullMonth" TitleFormat="Month" Width="369px" OnSelectionChanged="Calendar1_SelectionChanged">
             <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" ForeColor="#333333" Height="10pt" />
             <DayStyle Width="14%" />
             <NextPrevStyle Font-Size="8pt" ForeColor="White" />
@@ -36,12 +36,15 @@
             <TitleStyle BackColor="Black" Font-Bold="True" Font-Size="13pt" ForeColor="White" Height="14pt" />
             <TodayDayStyle BackColor="#CCCC99" />
         </asp:Calendar>
-        Incio&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="TextBoxHInicio" runat="server" style="font-size: large" Width="96px"></asp:TextBox>
-        <br />
-        Finalizacion&nbsp;&nbsp;
-        <asp:TextBox ID="TextBoxHFinalizacion" runat="server" style="font-size: large" Width="92px"></asp:TextBox>
     </p>
+    <p style="font-size: large">
+        &nbsp;</p>
+    <p style="font-size: large">
+        Horario de Consulta:&nbsp; <asp:DropDownList ID="DropDownListHorarioCita" runat="server">
+        </asp:DropDownList>
+    </p>
+    <p style="font-size: large">
+        &nbsp;</p>
     <p style="font-size: large; text-align: center;">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="ButtonAgendar" runat="server" OnClick="ButtonAgendar_Click" style="font-size: medium" Text="Programar Cita" Visible="False" />
