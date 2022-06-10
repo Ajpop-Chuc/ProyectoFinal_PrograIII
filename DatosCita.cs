@@ -8,7 +8,6 @@ namespace ProyectoFinalP_PrograIII
     public class DatosCita
     {
         public string NitPaceinte { get; set; }
-        public string horaInicio { get; set; }
-        public string horaFinal { get; set; }
+        public string horarioConsulta { get; set; }
     }
 }

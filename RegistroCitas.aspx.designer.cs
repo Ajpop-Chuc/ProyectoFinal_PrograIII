@@ -69,22 +69,13 @@ namespace ProyectoFinalP_PrograIII
         protected global::System.Web.UI.WebControls.Calendar Calendar1;
 
         /// <summary>
-        /// Control TextBoxHInicio.
+        /// Control DropDownListHorarioCita.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxHInicio;
-
-        /// <summary>
-        /// Control TextBoxHFinalizacion.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxHFinalizacion;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownListHorarioCita;
 
         /// <summary>
         /// Control ButtonAgendar.

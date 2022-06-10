@@ -42,7 +42,7 @@ namespace ProyectoFinalP_PrograIII
             }
             else
             {
-                Response.Write("<script>alert('Medicamento No Ingresado ')</script>");
+                Response.Write("<script>alert('Sintoma No Ingresado ')</script>");
             }
         }
 
