@@ -82,7 +82,7 @@ namespace ProyectoFinalP_PrograIII
             //recetas -> ya
             datosConsultaAux.precioConsulta = Convert.ToDouble(TextBoxCosto.Text);
             string archivo = "~/imagenes/" + FileUploadImagen.FileName;
-            datosConsultaAux.ImgenesConsulta.Add(archivo);
+            datosConsultaAux.imgenesConsulta = archivo;
 
             ConsultaPaciente.NitPaciente = TextBoxNit.Text;
             ConsultaPaciente.ListaDatosConsulta.Add(datosConsultaAux);
@@ -144,14 +144,14 @@ namespace ProyectoFinalP_PrograIII
             bool exitencia = true;
             historialPaciente paciente = new historialPaciente();
             paciente = historialPaciente.listaHistorialPciente.Find(x => x.NitPaciente==TextBoxNit.Text);
-
+            if (paciente == null) { paciente = new historialPaciente(); }
                 for (char letra = 'A'; letra <= 'Z'; letra++)
                 {
                     for (int entero = 1; entero <= 5; entero++)
                     {
                         for (int entero2 = 10; entero2 >= 5; entero2--)
                         {
-                            ID = paciente.NitPaciente+letra.ToString() + entero.ToString() + entero2.ToString();
+                            ID = TextBoxNit+letra.ToString() + entero.ToString() + entero2.ToString();
 
                             if (paciente.ListaDatosConsulta.Exists(x => x.idConsulta == ID))
                             { }

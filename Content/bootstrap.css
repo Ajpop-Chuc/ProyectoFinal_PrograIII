@@ -136,6 +136,7 @@ input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
     font-weight: 700;
+    height: 26px;
 }
 button[disabled],
 html input[disabled] {
@@ -2353,7 +2354,8 @@ pre code {
 }
 table {
   background-color: transparent;
-    font-size: xx-small;
+    font-size: small;
+    font-weight: 700;
 }
 table col[class*="col-"] {
   position: static;
