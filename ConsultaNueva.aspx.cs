@@ -23,6 +23,8 @@ namespace ProyectoFinalP_PrograIII
                 Sintomas.leerJson(Server.MapPath("DatosSintomas.json"));
                 Medicamentos.listaMedicamentos.Clear();
                 Medicamentos.leerJson(Server.MapPath("DatosMedicamentos.json"));
+                historialPaciente.listaHistorialPciente.Clear();
+                historialPaciente.leerJson(Server.MapPath("HisotrialMedico.json"));
             }
             
         }
@@ -79,12 +81,14 @@ namespace ProyectoFinalP_PrograIII
 
             ConsultaPaciente.ListaDatosConsulta.Add(datosConsultaAux);
 
-            if (ConsultaPaciente == null)
+            if (historialPaciente.listaHistorialPciente.Find(x => x.NitPaciente == TextBoxNit.Text) == null)
             {
                 historialPaciente.listaHistorialPciente.Add(ConsultaPaciente);
             }
 
             historialPaciente.guardarenJson(Server.MapPath("HisotrialMedico.json"));
+            ConsultaPaciente = new historialPaciente();
+            limpiar();
         }
 
         
@@ -117,6 +121,16 @@ namespace ProyectoFinalP_PrograIII
 
             }
         }
-       
+
+        protected void limpiar()
+        {
+            TextBoxNit.Text = "";
+            TextBoxTemperatura.Text = "";
+            TextBoxPresión.Text = "";
+            TextBoxDiagnostico.Text = "";
+            TextBoxTratamiento.Text = "";
+            TextBoxCosto.Text = "";
+        }
+
     }
 }
