@@ -8,15 +8,15 @@ using System.Web.UI.WebControls;
 namespace ProyectoFinalP_PrograIII
 {
     public partial class ReportesAdmin : System.Web.UI.Page
-    { 
-        Agenda agenda = new Agenda();
-        
+    {         
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 Agenda.listaAgenda.Clear();
                 Agenda.leerJson(Server.MapPath("RegistroCitas.Json"));
+                historialPaciente.listaHistorialPciente.Clear();
+                historialPaciente.leerJson(Server.MapPath("HisotrialMedico.Json"));
                 for(int a = 1; a <= 12; a++)
                 {
                     DropDownListMes1.Items.Add(a.ToString());
@@ -50,7 +50,45 @@ namespace ProyectoFinalP_PrograIII
         }
         protected void Opcion2()
         {
-
+            int contador = 0;
+            historialPaciente historial = new historialPaciente();
+            DatosCita datos = new DatosCita();
+            foreach(var x in historialPaciente.listaHistorialPciente)
+            {
+                for(int recorrido=Convert.ToInt32(DropDownListMes1.SelectedValue);recorrido<=Convert.ToInt32(DropDownListMes2.SelectedValue);recorrido++)
+                {
+                    if (x.ListaDatosConsulta.Find(i => i.fechaConsulta.Month == recorrido) != null)
+                    {
+                        contador++;
+                    }
+                }
+            }
+            Label4.Text = "El Total De Pacientes Atendidos durante los meses '0" + DropDownListMes1.SelectedValue + "-0" + DropDownListMes2.SelectedValue + "' Fueron de: '" + contador + "' Pacientes";
+        }
+        protected void Opcion3()
+        {
+            int contador=0;
+            DateTime hoy = DateTime.Now;
+            foreach(var x in Agenda.listaAgenda)
+            {
+                if ((x.FechaCita.Month <= hoy.Month)&&(x.FechaCita.Day<hoy.Day))
+                {
+                    foreach(var i in x.ListaCitas)
+                    {
+                          foreach (var a in historialPaciente.listaHistorialPciente)
+                            {
+                                if (a.NitPaciente == i.NitPaceinte)
+                                {
+                                    if (a.ListaDatosConsulta.Find(l => l.fechaConsulta == x.FechaCita) == null)
+                                    {
+                                        contador += 1;
+                                    }
+                                }
+                            }                        
+                    }                    
+                }
+            }
+            Label4.Text = contador.ToString();
         }
         protected void Button1_Click(object sender, EventArgs e)
         {
@@ -74,15 +112,20 @@ namespace ProyectoFinalP_PrograIII
                 Label3.Visible = false;
                 DropDownListMes1.Visible = true;
                 DropDownListMes2.Visible = false;
+                ButtonMostrar.Visible = true;
             }
-            if (Menu1.SelectedItem == Menu1.Items[0])
+            if (Menu1.SelectedItem == Menu1.Items[1])
             {
                 Label1.Visible = false;
                 Label2.Visible = true;
                 Label3.Visible = true;
                 DropDownListMes1.Visible = true;
                 DropDownListMes2.Visible = true;
+                ButtonMostrar.Visible = true;
             }
+            if (Menu1.SelectedItem == Menu1.Items[2])
+                Opcion3();
+
         }
     }
 }

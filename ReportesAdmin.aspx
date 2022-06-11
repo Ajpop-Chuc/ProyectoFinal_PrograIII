@@ -30,7 +30,7 @@
             </asp:DropDownList>
         </li>
         <li>
-            <asp:Button ID="ButtonMostrar" runat="server" Height="36px" OnClick="Button1_Click" Text="Ver Reporte" />
+            <asp:Button ID="ButtonMostrar" runat="server" Height="36px" OnClick="Button1_Click" Text="Ver Reporte" Visible="False" />
         </li>
     </ul>
     <p>
