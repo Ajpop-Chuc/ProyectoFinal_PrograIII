@@ -33,6 +33,15 @@ namespace ProyectoFinalP_PrograIII
         protected global::System.Web.UI.WebControls.Button ButtonBuscar;
 
         /// <summary>
+        /// Control Label1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
+
+        /// <summary>
         /// Control TextBoxTemperatura.
         /// </summary>
         /// <remarks>
@@ -166,6 +175,15 @@ namespace ProyectoFinalP_PrograIII
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload FileUploadImagen;
+
+        /// <summary>
+        /// Control RadioButton1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RadioButton1;
 
         /// <summary>
         /// Control ButtonGuardarConsulta.
