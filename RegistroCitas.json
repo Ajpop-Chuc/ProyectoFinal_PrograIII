@@ -1,26 +1,30 @@
 [
   {
-    "FechaCita": "2022-06-10T00:00:00",
+    "FechaCita": "2022-06-01T00:00:00",
     "ListaCitas": [
       {
         "NitPaceinte": "1",
         "horarioConsulta": "13 - 14"
       },
       {
-        "NitPaceinte": "1",
+        "NitPaceinte": "2",
         "horarioConsulta": "9 - 10"
-      },
-      {
-        "NitPaceinte": "1",
-        "horarioConsulta": "10 - 11"
       }
     ]
   },
   {
-    "FechaCita": "2022-06-17T00:00:00",
+    "FechaCita": "2022-06-03T00:00:00",
     "ListaCitas": [
       {
         "NitPaceinte": "1",
+        "horarioConsulta": "8 - 9"
+      },
+      {
+        "NitPaceinte": "2",
+        "horarioConsulta": "8 - 9"
+      },
+      {
+        "NitPaceinte": "3",
         "horarioConsulta": "8 - 9"
       }
     ]

@@ -133,8 +133,8 @@ button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  -webkit-appearance: button;
-  cursor: pointer;
+    -webkit-appearance: button;
+    cursor: pointer;
     font-weight: 700;
     height: 26px;
     text-align: center;
@@ -1097,7 +1097,7 @@ button,
 select,
 textarea {
   font-family: inherit;
-  font-size: x-small;
+  font-size: large;
   line-height: inherit;
 }
 a {
@@ -1293,6 +1293,7 @@ h6,
 p {
   margin: 0 0 10px;
     font-size: large;
+    text-align: center;
 }
 .lead {
   margin-bottom: 20px;
