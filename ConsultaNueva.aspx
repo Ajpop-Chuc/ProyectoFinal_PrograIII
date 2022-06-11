@@ -1,15 +1,17 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="ConsultaNueva.aspx.cs" Inherits="ProyectoFinalP_PrograIII.ConsultaNueva" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-         <p class="text-center">
+         <p class="text-center" style="text-align: center">
         <br />
         <span style="font-size: larger; text-align: center; font-weight: 700">_______________ Consulta Nueva _______________</span></p>
     <p>
         <span style="font-size: large"><strong><em>&nbsp;&nbsp;&nbsp; Nit Paciente</em>&nbsp;</strong>&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="TextBoxNit" runat="server" style="font-size: large" Width="134px"></asp:TextBox>
         &nbsp;<asp:Button ID="ButtonBuscar" runat="server" Text="Buscar" OnClick="ButtonBuscar_Click" />
+        &nbsp;&nbsp;&nbsp;
+        <asp:Label ID="Label1" runat="server" ForeColor="#990000" style="font-size: x-small" Text="."></asp:Label>
         </span>
     </p>
-     <p class="text-center" style="font-size: x-large; text-decoration: underline;">
+     <p class="text-center" style="font-size: x-large; text-decoration: underline; text-align: center;">
          <strong><em>Datos de la Cita</em></strong></p>
     <ul>
         <li style="font-weight: 700"><em>Temperatura:&nbsp;
@@ -83,6 +85,9 @@
                  </em></li>
              <li style="font-weight: 700"><em>Imagenes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:FileUpload ID="FileUploadImagen" runat="server" />
                  </em></li>
+             <li style="font-weight: 700">
+                 <asp:RadioButton ID="RadioButton1" runat="server" OnCheckedChanged="RadioButton1_CheckedChanged" Text=" _Agendar Continudad De Tratamiento" />
+&nbsp;</li>
          </ul>
     <p>
         <em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

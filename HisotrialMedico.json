@@ -10,7 +10,7 @@
         "Presion": "100",
         "Diagnostico": "lalal",
         "Tratamiento": "alalal",
-        "ProxCita": "0001-01-01T00:00:00",
+        "ProxCita": true,
         "precioConsulta": 3500.8,
         "imgenesConsulta": "~/imagenes/1.jpg",
         "Sintomas": [ "csA1" ],
