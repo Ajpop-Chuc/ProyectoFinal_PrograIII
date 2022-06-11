@@ -20,7 +20,6 @@ namespace ProyectoFinalP_PrograIII
             }
         }
 
-
         protected void ButtonAgregar_Click(object sender, EventArgs e)
         {
             Pacientes paciente = new Pacientes();
@@ -30,9 +29,18 @@ namespace ProyectoFinalP_PrograIII
             paciente.Direccion = TextBoxDireccion.Text;
             paciente.FechaNacimiento = Calendar1.SelectedDate;
             paciente.Telefono = TextBoxTelefono.Text;
+            paciente.Edad = Pacientes.edad(Calendar1.SelectedDate);
             Pacientes.listaPacientes.Add(paciente);
             Pacientes.guardarenJson(archivo);
 
+
+            ////////////////////////////////////////////
+            ///
+            ControlEdad EdadAg = new ControlEdad();
+            EdadAg.Edad = paciente.Edad;
+            ControlEdad.Edades.Add(EdadAg);
+            int promedioEdades = Convert.ToInt32(ControlEdad.Edades.Average(x => x.Edad));
+            
         }
 
         protected void ButtonBuscar_Click(object sender, EventArgs e)

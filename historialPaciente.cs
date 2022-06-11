@@ -28,5 +28,7 @@ namespace ProyectoFinalP_PrograIII
             jsonStream.Close();
             listaHistorialPciente = JsonConvert.DeserializeObject<List<historialPaciente>>(json);
         }
+
+        
     }
 }

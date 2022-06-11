@@ -14,9 +14,11 @@ namespace ProyectoFinalP_PrograIII
         public string Apellido { get; set; }
         public string Direccion { get; set; }
         public DateTime FechaNacimiento { get; set; }
+        public int Edad { get; set; } 
         public string Telefono { get; set; }
 
         public static List<Pacientes> listaPacientes = new List<Pacientes>();
+
         public static void guardarenJson(string archivo)
         {
             string json = JsonConvert.SerializeObject(listaPacientes);
@@ -29,5 +31,13 @@ namespace ProyectoFinalP_PrograIII
             jsonStream.Close();
             listaPacientes = JsonConvert.DeserializeObject<List<Pacientes>>(json);
         }
+
+        public static int edad(DateTime FechaNac)
+        {
+            DateTime hoy = DateTime.Now;
+            TimeSpan intervalo = DateTime.Now - FechaNac;           
+            return (intervalo.Days / 365);
+        }
+
     }
 }

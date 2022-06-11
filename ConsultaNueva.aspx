@@ -1,4 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="ConsultaNueva.aspx.cs" Inherits="ProyectoFinalP_PrograIII.ConsultaNueva" %>
+
+<script runat="server">
+
+    protected void ButtonAgregarReceta_Click(object sender, EventArgs e)
+    {
+
+    }
+</script>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
          <p class="text-center">
         <br />
@@ -31,6 +40,7 @@
         </li>
         <li><strong><em>Síntomas:&nbsp; </em> </strong><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:DropDownList ID="DropDownListSintomas" runat="server" Height="16px" Width="124px">
+                <asp:ListItem>dolor</asp:ListItem>
             </asp:DropDownList>
 &nbsp;<asp:Button ID="ButtonAgregarSintoma" runat="server" Text="Agregar Sintoma" Visible="False" OnClick="ButtonAgregarSintoma_Click" />
             </em>
@@ -59,6 +69,10 @@
              <li><strong><em>Receta:</em></strong><ul>
                  <li><em>Medicamento: </em> <strong><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                      <asp:DropDownList ID="DropDownListMedicamento" runat="server" OnSelectedIndexChanged="DropDownListMedicamento_SelectedIndexChanged" ValidateRequestMode="Disabled" Width="121px">
+                         <asp:ListItem>Ibuprufeno</asp:ListItem>
+                         <asp:ListItem>Paracetamol</asp:ListItem>
+                         <asp:ListItem>Aspirina</asp:ListItem>
+                         <asp:ListItem>Lansoprazol</asp:ListItem>
                      </asp:DropDownList>
                      </em>
                      </strong></li>
@@ -82,11 +96,11 @@
     </strong>
                  </em></li>
              <li style="font-weight: 700"><em>Imagenes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:FileUpload ID="FileUploadImagen" runat="server" />
+        <asp:Button ID="ButtonGuardarConsulta" runat="server" Text="GUARDAR CUNSULTA" OnClick="ButtonGuardarConsulta_Click" />
                  </em></li>
          </ul>
     <p>
         <em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="ButtonGuardarConsulta" runat="server" Text="GUARDAR CUNSULTA" Visible="False" OnClick="ButtonGuardarConsulta_Click" />
          </em>
          </p>
 </asp:Content>

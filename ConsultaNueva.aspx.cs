@@ -66,9 +66,53 @@ namespace ProyectoFinalP_PrograIII
             recetaAux = new RecetaAux();
             TextBoxDosis.Text = "";
             TextBoxHorarioAdmin.Text = "";
+            /////////////////////////////////////////////////////////////
+            
+            ControlMedicamento medicamento = new ControlMedicamento();
+            medicamento = ControlMedicamento.ListaControlMedicamentos.Find(x => x.Nombre == DropDownListMedicamento.Text);
+            if (medicamento == null)
+            {
+                ControlMedicamento medicamentoNuevo = new ControlMedicamento();
+                medicamentoNuevo.Nombre = DropDownListMedicamento.Text;
+                medicamentoNuevo.VecesRecetada = medicamentoNuevo.VecesRecetada + 1;
+                ControlMedicamento.ListaControlMedicamentos.Add(medicamentoNuevo);
+                ControlMedicamento.guardarenJson(Server.MapPath("ControlMedicamentos.json"));
+            }
+
+            if (ControlMedicamento.ListaControlMedicamentos.Exists(x=>x.Nombre == DropDownListMedicamento.Text))
+            {
+                medicamento.VecesRecetada = medicamento.VecesRecetada + 1;
+                ControlMedicamento.guardarenJson(Server.MapPath("ControlMedicamentos.json"));
+            }
+            ControlMedicamento.ListaControlMedicamentos.OrderByDescending(x => x.VecesRecetada);
+            ControlMedicamento.guardarenJson(Server.MapPath("ControlMedicamentos.json"));
+            ////////////////////////////////////////////////
+
         }
         protected void ButtonGuardarConsulta_Click(object sender, EventArgs e)
         {
+            /////////////
+            ControlDiagnostico enfermedad = new ControlDiagnostico();
+            enfermedad = ControlDiagnostico.ListaControlEnfermedades.Find(x => x.Enfermedad == TextBoxDiagnostico.Text);
+            if (enfermedad == null)
+            {
+                ControlDiagnostico enfermedadNueva = new ControlDiagnostico();
+                enfermedadNueva.Enfermedad = TextBoxDiagnostico.Text;
+                enfermedadNueva.VecesDiagnosticada = enfermedadNueva.VecesDiagnosticada + 1;
+                ControlDiagnostico.ListaControlEnfermedades.Add(enfermedadNueva);
+                ControlDiagnostico.guardarenJson(Server.MapPath("ControlEnfermedades.json"));
+            }
+
+            if (ControlDiagnostico.ListaControlEnfermedades.Exists(x => x.Enfermedad == TextBoxDiagnostico.Text))
+            {
+                enfermedad.VecesDiagnosticada = enfermedad.VecesDiagnosticada + 1;
+                ControlMedicamento.guardarenJson(Server.MapPath("ControlEnfermedades.json"));
+            }
+            ControlDiagnostico.ListaControlEnfermedades.OrderByDescending(x => x.VecesDiagnosticada);
+            ControlMedicamento.guardarenJson(Server.MapPath("ControlEnfermedades.json"));
+            ///////////////////////////////////////
+
+
             DateTime fecha = DateTime.Now;
 
             datosConsultaAux.idConsulta = cracionIdCita();
