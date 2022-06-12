@@ -194,7 +194,7 @@ namespace ProyectoFinalP_PrograIII
                     {
                         for (int entero2 = 10; entero2 >= 5; entero2--)
                         {
-                            ID = TextBoxNit+letra.ToString() + entero.ToString() + entero2.ToString();
+                            ID = TextBoxNit.Text+letra.ToString() + entero.ToString() + entero2.ToString();
 
                             if (paciente.ListaDatosConsulta.Exists(x => x.idConsulta == ID))
                             { }
@@ -216,10 +216,15 @@ namespace ProyectoFinalP_PrograIII
         {
             historialPaciente historial = historialPaciente.listaHistorialPciente.Find(x => x.NitPaciente == TextBoxNit.Text);
             int capacidad = historial.ListaDatosConsulta.Count();
-            DatosConsultaAux datos = historial.ListaDatosConsulta[capacidad - 1];
-            if (datos.ProxCita== true){
-                Label1.Text = "Esta Consulta es una Continuidad de la Consulta 'ID: " + datos.idConsulta + "' Creada El " + datos.fechaConsulta;
+            if (capacidad > 0)
+            {
+                DatosConsultaAux datos = historial.ListaDatosConsulta[capacidad - 1];
+                if (datos.ProxCita == true)
+                {
+                    Label1.Text = "Esta Consulta es una Continuidad de la Consulta 'ID: " + datos.idConsulta + "' Creada El " + datos.fechaConsulta;
+                }
             }
+            
         }
         protected void RadioButton1_CheckedChanged(object sender, EventArgs e)
         {

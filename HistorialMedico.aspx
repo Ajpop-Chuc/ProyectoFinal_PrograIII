@@ -35,7 +35,7 @@
         </li>
         <li><strong>Diagnóstico:&nbsp;</strong></li>
     </ul>
-<p>
+<p class="text-left">
     <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <asp:TextBox ID="TextBoxDiagnostico" runat="server" Enabled="False" Height="116px" TextMode="MultiLine" Width="278px" style="font-size: small"></asp:TextBox>
     </strong>
@@ -44,7 +44,7 @@
         <li><strong>Tratamiento:&nbsp;
             </strong></li>
     </ul>
-<p>
+<p class="text-left">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>
     &nbsp;
     <asp:TextBox ID="TextBoxTratamiento" runat="server" Enabled="False" Height="116px" TextMode="MultiLine" Width="278px" style="font-size: small"></asp:TextBox>
