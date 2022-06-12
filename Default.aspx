@@ -5,8 +5,8 @@
     <div class="row">
         <div class="col-md-4" style="text-align: center">
             <br />
-            <p>
-    <span style="font-size: larger; "><strong><em>_____ BIENVENIDO AL MODULO ADMIN _____</em></strong></span></p>
+            <p class="text-left" style="text-align: center">
+    <span style="font-size: larger; "><strong><em>_____ MODULO ADMIN _____</em></strong></span></p>
         </div>
         <div class="col-md-4">
         </div>
