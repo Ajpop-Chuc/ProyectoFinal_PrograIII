@@ -88,7 +88,7 @@ namespace ProyectoFinalP_PrograIII
                     }                    
                 }
             }
-            Label4.Text = "Cantidad De Pacientes Que No Se Presentaron A Sus Consultas: "contador.ToString();
+            Label4.Text = "Cantidad De Pacientes Que No Se Presentaron A Sus Consultas: "+contador.ToString();
         }
         protected void Button1_Click(object sender, EventArgs e)
         {
