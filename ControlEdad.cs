@@ -11,5 +11,6 @@ namespace ProyectoFinalP_PrograIII
 
         public static List<ControlEdad> Edades = new List<ControlEdad>();
 
+
     }
 }

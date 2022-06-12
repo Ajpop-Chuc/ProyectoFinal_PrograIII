@@ -32,7 +32,6 @@ namespace ProyectoFinalP_PrograIII
             paciente.Telefono = TextBoxTelefono.Text;
             Pacientes.listaPacientes.Add(paciente);
             Pacientes.guardarenJson(archivo);
-
         }
 
         protected void ButtonBuscar_Click(object sender, EventArgs e)

@@ -137,6 +137,8 @@
     <Content Include="DatosMedicamentos.json" />
     <Content Include="DatosSintomas.json" />
     <Content Include="Login.json" />
+    <Content Include="ControlEnfermedades.json" />
+    <Content Include="ControlMedicamentos.json" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Reporte.aspx" />
     <Content Include="ReporteConsultas.aspx" />
