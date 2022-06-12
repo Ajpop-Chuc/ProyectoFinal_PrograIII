@@ -57,6 +57,24 @@ namespace ProyectoFinalP_PrograIII
         protected void ButtonAgregarSintoma_Click(object sender, EventArgs e)
         {
             datosConsultaAux.Sintomas.Add(DropDownListSintomas.SelectedItem.ToString());
+            /////////////////////////////////////////////////////////////////////////////////////////////////////
+            ControlDiagnostico enfermedad = new ControlDiagnostico();
+            enfermedad = ControlDiagnostico.ListaControlEnfermedades.Find(x => x.Enfermedad == DropDownListSintomas.SelectedValue.ToString());
+            if (enfermedad == null)
+            {
+                ControlDiagnostico enfermedadNueva = new ControlDiagnostico();
+                enfermedadNueva.Enfermedad = TextBoxDiagnostico.Text;
+                enfermedadNueva.VecesDiagnosticada = enfermedadNueva.VecesDiagnosticada + 1;
+                ControlDiagnostico.ListaControlEnfermedades.Add(enfermedadNueva);
+                ControlDiagnostico.guardarenJson(Server.MapPath("ControlEnfermedades.json"));
+            }
+
+            else if (ControlDiagnostico.ListaControlEnfermedades.Exists(x => x.Enfermedad == TextBoxDiagnostico.Text))
+            {
+                enfermedad.VecesDiagnosticada = 1;
+                ControlMedicamento.guardarenJson(Server.MapPath("ControlEnfermedades.json"));
+            }
+            /////////////////////////////////////////////////////////////////////////////////////////////////////
         }
         protected void ButtonAgregarReceta_Click(object sender, EventArgs e)
         {
@@ -67,6 +85,24 @@ namespace ProyectoFinalP_PrograIII
             recetaAux = new RecetaAux();
             TextBoxDosis.Text = "";
             TextBoxHorarioAdmin.Text = "";
+            /////////////////////////////////////////////////////////////////
+            ControlMedicamento medicamento = new ControlMedicamento();
+            medicamento = ControlMedicamento.ListaControlMedicamentos.Find(x => x.codigo == DropDownListMedicamento.Text);
+            if (medicamento == null)
+            {
+                ControlMedicamento medicamentoNuevo = new ControlMedicamento();
+                medicamentoNuevo.codigo = DropDownListMedicamento.Text;
+                medicamentoNuevo.VecesRecetada = medicamentoNuevo.VecesRecetada + 1;
+                ControlMedicamento.ListaControlMedicamentos.Add(medicamentoNuevo);
+                ControlMedicamento.guardarenJson(Server.MapPath("ControlMedicamentos.json"));
+            }
+
+            else if (ControlMedicamento.ListaControlMedicamentos.Exists(x => x.codigo == DropDownListMedicamento.Text))
+            {
+                medicamento.VecesRecetada =  1;
+                ControlMedicamento.guardarenJson(Server.MapPath("ControlMedicamentos.json"));
+            }
+            /////////////////////////////////////////////////////////////////
         }
         protected void ButtonGuardarConsulta_Click(object sender, EventArgs e)
         {
@@ -101,6 +137,7 @@ namespace ProyectoFinalP_PrograIII
             historialPaciente.guardarenJson(Server.MapPath("HisotrialMedico.json"));
             ConsultaPaciente = new historialPaciente();
             limpiar();
+            
         }
 
 

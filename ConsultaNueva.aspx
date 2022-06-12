@@ -3,7 +3,7 @@
          <p class="text-center" style="text-align: center">
         <br />
         <span style="font-size: larger; text-align: center; font-weight: 700">_______________ Consulta Nueva _______________</span></p>
-    <p>
+    <p class="text-left">
         <span style="font-size: large"><strong><em>&nbsp;&nbsp;&nbsp; Nit Paciente</em>&nbsp;</strong>&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="TextBoxNit" runat="server" style="font-size: large" Width="134px"></asp:TextBox>
         &nbsp;<asp:Button ID="ButtonBuscar" runat="server" Text="Buscar" OnClick="ButtonBuscar_Click" />
@@ -39,7 +39,7 @@
         </li>
         <li><strong><em>Diagnóstico:&nbsp;</em></strong></li>
     </ul>
-<p>
+<p class="text-left">
     <strong><em>&nbsp;&nbsp;&nbsp;&nbsp;
     <asp:TextBox ID="TextBoxDiagnostico" runat="server" Height="116px" TextMode="MultiLine" Width="278px"></asp:TextBox>
     </em>
@@ -50,7 +50,7 @@
             </em>
             </strong></li>
     </ul>
-<p>
+<p class="text-left">
     <em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </em> <strong>
     <em>
     <asp:TextBox ID="TextBoxTratamiento" runat="server" Height="116px" TextMode="MultiLine" Width="278px"></asp:TextBox>
