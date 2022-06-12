@@ -137,6 +137,7 @@
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Reporte.aspx" />
     <Content Include="ReporteConsultas.aspx" />
+    <Content Include="ReportesAdmin.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -257,6 +258,13 @@
     </Compile>
     <Compile Include="ReporteConsultas.aspx.designer.cs">
       <DependentUpon>ReporteConsultas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportesAdmin.aspx.cs">
+      <DependentUpon>ReportesAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportesAdmin.aspx.designer.cs">
+      <DependentUpon>ReportesAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Sintomas.cs" />
     <Compile Include="Site.Master.cs">
