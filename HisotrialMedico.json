@@ -4,13 +4,33 @@
     "ListaDatosConsulta": [
       {
         "idConsulta": "1A110",
-        "fechaConsulta": "2022-06-10T00:00:00-06:00",
+        "fechaConsulta": "2022-06-01T00:00:00-06:00",
         "horaCita": "11",
         "Temperatura": "100",
         "Presion": "100",
         "Diagnostico": "lalal",
         "Tratamiento": "alalal",
-        "ProxCita": "0001-01-01T00:00:00",
+        "ProxCita": false,
+        "precioConsulta": 3500.8,
+        "imgenesConsulta": "~/imagenes/1.jpg",
+        "Sintomas": [ "csA1" ],
+        "Receta": [
+          {
+            "Medicamento": "m1",
+            "Dosis": "100",
+            "HorarioAdmin": "100"
+          }
+        ]
+      },
+      {
+        "idConsulta": "1A110",
+        "fechaConsulta": "2022-06-03T00:00:00-06:00",
+        "horaCita": "11",
+        "Temperatura": "100",
+        "Presion": "100",
+        "Diagnostico": "lalal",
+        "Tratamiento": "alalal",
+        "ProxCita": true,
         "precioConsulta": 3500.8,
         "imgenesConsulta": "~/imagenes/1.jpg",
         "Sintomas": [ "csA1" ],
@@ -29,13 +49,13 @@
     "ListaDatosConsulta": [
       {
         "idConsulta": "1A110",
-        "fechaConsulta": "2022-06-10T00:00:00-06:00",
+        "fechaConsulta": "2022-06-03T00:00:00-06:00",
         "horaCita": "11",
         "Temperatura": "100",
         "Presion": "100",
         "Diagnostico": "lalal",
         "Tratamiento": "alalal",
-        "ProxCita": "0001-01-01T00:00:00",
+        "ProxCita": false,
         "precioConsulta": 3500.8,
         "imgenesConsulta": "~/imagenes/1.jpg",
         "Sintomas": [ "csA1" ],
@@ -48,5 +68,17 @@
         ]
       }
     ]
+  },
+  {
+    "NitPaciente": "3",
+    "ListaDatosConsulta": []
+  },
+  {
+    "NitPaciente": "4",
+    "ListaDatosConsulta": []
+  },
+  {
+    "NitPaciente": "5",
+    "ListaDatosConsulta": []
   }
 ]
