@@ -18,7 +18,7 @@ namespace ProyectoFinalP_PrograIII
         public string Tratamiento { get; set; }
 
         private List<RecetaAux> receta = new List<RecetaAux>();
-        public DateTime ProxCita { get; set; }
+        public bool ProxCita { get; set; }
         public double precioConsulta { get; set; }
 
         public string imgenesConsulta { get; set; }
