@@ -178,7 +178,7 @@ namespace ProyectoFinalP_PrograIII
         protected void validacionContinudidadCita()
         {
             historialPaciente historial = historialPaciente.listaHistorialPciente.Find(x => x.NitPaciente == TextBoxNit.Text);
-            int capacidad = historialPaciente.listaHistorialPciente.Count();
+            int capacidad = historial.ListaDatosConsulta.Count();
             DatosConsultaAux datos = historial.ListaDatosConsulta[capacidad - 1];
             if (datos.ProxCita== true){
                 Label1.Text = "Esta Consulta es una Continuidad de la Consulta 'ID: " + datos.idConsulta + "' Creada El " + datos.fechaConsulta;
