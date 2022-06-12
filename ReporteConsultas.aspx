@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="ReporteConsultas.aspx.cs" Inherits="ProyectoFinalP_PrograIII.ReporteConsultas" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-      <h1>REPORTES DE CONSULTA</h1>
+      <h1 style="text-align: center"><strong>REPORTES DE CONSULTA</strong></h1>
     <p>
         &nbsp;</p>
     <p>
