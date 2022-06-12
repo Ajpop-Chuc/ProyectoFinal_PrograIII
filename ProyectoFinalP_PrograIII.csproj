@@ -139,6 +139,7 @@
     <Content Include="Login.json" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Reporte.aspx" />
+    <Content Include="ReporteConsultas.aspx" />
     <Content Include="ReportesAdmin.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -185,7 +186,10 @@
     <Compile Include="ConsultaNueva.aspx.designer.cs">
       <DependentUpon>ConsultaNueva.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ControlDiagnostico.cs" />
+    <Compile Include="ControlEdad.cs" />
     <Compile Include="ControlLogin.cs" />
+    <Compile Include="ControlMedicamento.cs" />
     <Compile Include="DatosCita.cs" />
     <Compile Include="DatosConsultaAux.cs" />
     <Compile Include="Default.aspx.cs">
@@ -266,6 +270,13 @@
     </Compile>
     <Compile Include="Reporte.aspx.designer.cs">
       <DependentUpon>Reporte.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteConsultas.aspx.cs">
+      <DependentUpon>ReporteConsultas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReporteConsultas.aspx.designer.cs">
+      <DependentUpon>ReporteConsultas.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReportesAdmin.aspx.cs">
       <DependentUpon>ReportesAdmin.aspx</DependentUpon>
