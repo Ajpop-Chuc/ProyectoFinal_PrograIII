@@ -1,1 +1,26 @@
-[{"Nit":"Nit 1","Nombre":"Nombre 1","Apellido":"Apellido 1","Direccion":"Direccion 1","FechaNacimiento":"2022-04-14T00:00:00","Telefono":"12345678"},{"Nit":"Nit 2","Nombre":"Nombre 2","Apellido":"Apellido 2","Direccion":"Direccion 2","FechaNacimiento":"2022-04-10T00:00:00","Telefono":"87654321"},{"Nit":"Nit 3","Nombre":"Nombre 3","Apellido":"Apellido 3","Direccion":"Direccion 3","FechaNacimiento":"2022-04-06T00:00:00","Telefono":"74123698"}]
+[
+  {
+    "Nit": "Nit 1",
+    "Nombre": "Nombre 1",
+    "Apellido": "Apellido 1",
+    "Direccion": "Direccion 1",
+    "FechaNacimiento": "2003-04-14T00:00:00",
+    "Telefono": "12345678"
+  },
+  {
+    "Nit": "Nit 2",
+    "Nombre": "Nombre 2",
+    "Apellido": "Apellido 2",
+    "Direccion": "Direccion 2",
+    "FechaNacimiento": "1999-04-10T00:00:00",
+    "Telefono": "87654321"
+  },
+  {
+    "Nit": "Nit 3",
+    "Nombre": "Nombre 3",
+    "Apellido": "Apellido 3",
+    "Direccion": "Direccion 3",
+    "FechaNacimiento": "2004-04-06T00:00:00",
+    "Telefono": "74123698"
+  }
+]
