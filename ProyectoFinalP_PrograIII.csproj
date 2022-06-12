@@ -186,7 +186,10 @@
     <Compile Include="ConsultaNueva.aspx.designer.cs">
       <DependentUpon>ConsultaNueva.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ControlDiagnostico.cs" />
+    <Compile Include="ControlEdad.cs" />
     <Compile Include="ControlLogin.cs" />
+    <Compile Include="ControlMedicamento.cs" />
     <Compile Include="DatosCita.cs" />
     <Compile Include="DatosConsultaAux.cs" />
     <Compile Include="Default.aspx.cs">
