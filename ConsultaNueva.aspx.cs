@@ -63,7 +63,7 @@ namespace ProyectoFinalP_PrograIII
             if (enfermedad == null)
             {
                 ControlDiagnostico enfermedadNueva = new ControlDiagnostico();
-                enfermedadNueva.Enfermedad = TextBoxDiagnostico.Text;
+                enfermedadNueva.Enfermedad = DropDownListSintomas.Text;
                 enfermedadNueva.VecesDiagnosticada = enfermedadNueva.VecesDiagnosticada + 1;
                 ControlDiagnostico.ListaControlEnfermedades.Add(enfermedadNueva);
                 ControlDiagnostico.guardarenJson(Server.MapPath("ControlEnfermedades.json"));

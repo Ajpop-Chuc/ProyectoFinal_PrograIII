@@ -1,1 +1,18 @@
-[{"Enfermedad":"","VecesDiagnosticada":1},{"Enfermedad":"","VecesDiagnosticada":1},{"Enfermedad":"","VecesDiagnosticada":1},{"Enfermedad":"","VecesDiagnosticada":1}]
+[
+  {
+    "Enfermedad": "",
+    "VecesDiagnosticada": 1
+  },
+  {
+    "Enfermedad": "",
+    "VecesDiagnosticada": 1
+  },
+  {
+    "Enfermedad": "",
+    "VecesDiagnosticada": 1
+  },
+  {
+    "Enfermedad": "",
+    "VecesDiagnosticada": 1
+  }
+]

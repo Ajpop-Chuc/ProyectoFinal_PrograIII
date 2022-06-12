@@ -2,10 +2,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
       <h1 style="text-align: center"><strong>REPORTES DE CONSULTA</strong></h1>
     <p>
-        &nbsp;</p>
-    <p>
-        <asp:RadioButton ID="RBEnfermedades" runat="server" Text="Enfermedades más comunes" />
-    </p>
+        &nbsp;<asp:RadioButton ID="RBEnfermedades" runat="server" Text="Enfermedades más comunes" />
+      </p>
     <p>
         <asp:RadioButton ID="RBEdades" runat="server" Text="Edad promedio de pacientes" />
     </p>

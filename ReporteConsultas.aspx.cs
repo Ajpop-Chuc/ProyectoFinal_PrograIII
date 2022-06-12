@@ -102,6 +102,10 @@ namespace ProyectoFinalP_PrograIII
             {
                 Response.Write("<script>alert('Selecciones Un Caja de Chequep')</script>");
             }
+            RBEdades.Checked = false;
+            RBEnfermedades.Checked = false;
+            RBIngresos.Checked = false;
+            RBMedicamentos.Checked = false;
         }
 
         protected void RBIngresos_CheckedChanged(object sender, EventArgs e)
