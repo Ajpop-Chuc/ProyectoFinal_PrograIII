@@ -53,6 +53,7 @@
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/HistorialMedico">Historial Pacientes</a></li>
                         <li><a runat="server" href="~/ConsultaNueva">Consulta Nueva</a></li>
+                        <li><a runat="server" href="~/ReporteConsultas">Reportes</a></li>
                          <li><a runat="server" href="~/Logout">Cerrar Sesión</a></li>
                     </ul>
                 </div>

@@ -10,7 +10,7 @@ namespace ProyectoFinalP_PrograIII
     public class ControlMedicamento
     {
         public static List<ControlMedicamento> ListaControlMedicamentos = new List<ControlMedicamento>();
-        public string Nombre { get; set; }
+        public string codigo { get; set; }
         public int VecesRecetada { get; set; }
 
         public static void guardarenJson(string archivo)
