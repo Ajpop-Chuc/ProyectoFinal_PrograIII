@@ -125,6 +125,8 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="HistorialMedico.aspx" />
     <Content Include="InicioM2.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Logout.aspx" />
     <Content Include="OpcionesMedicamento.aspx" />
     <Content Include="OpcionesPaciente.aspx" />
     <Content Include="OpcionesSintoma.aspx" />
@@ -134,8 +136,10 @@
     <Content Include="HisotrialMedico.json" />
     <Content Include="DatosMedicamentos.json" />
     <Content Include="DatosSintomas.json" />
+    <Content Include="Login.json" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Reporte.aspx" />
+    <Content Include="ReporteConsultas.aspx" />
     <Content Include="ReportesAdmin.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -182,6 +186,10 @@
     <Compile Include="ConsultaNueva.aspx.designer.cs">
       <DependentUpon>ConsultaNueva.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ControlDiagnostico.cs" />
+    <Compile Include="ControlEdad.cs" />
+    <Compile Include="ControlLogin.cs" />
+    <Compile Include="ControlMedicamento.cs" />
     <Compile Include="DatosCita.cs" />
     <Compile Include="DatosConsultaAux.cs" />
     <Compile Include="Default.aspx.cs">
@@ -208,6 +216,20 @@
     </Compile>
     <Compile Include="InicioM2.aspx.designer.cs">
       <DependentUpon>InicioM2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Medicamentos.cs" />
     <Compile Include="nCitasEnFechasAux.cs" />
@@ -248,6 +270,13 @@
     </Compile>
     <Compile Include="Reporte.aspx.designer.cs">
       <DependentUpon>Reporte.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteConsultas.aspx.cs">
+      <DependentUpon>ReporteConsultas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReporteConsultas.aspx.designer.cs">
+      <DependentUpon>ReporteConsultas.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReportesAdmin.aspx.cs">
       <DependentUpon>ReportesAdmin.aspx</DependentUpon>

@@ -1,0 +1,22 @@
+[
+  {
+    "usuario": "Damian",
+    "contraseña": "123456789",
+    "modulo": 1
+  },
+  {
+    "usuario": "Galvez",
+    "contraseña": "789",
+    "modulo": 1
+  },
+  {
+    "usuario": "Ajpop",
+    "contraseña": "321",
+    "modulo": 2
+  },
+  {
+    "usuario": "Ivana",
+    "contraseña": "123",
+    "modulo": 2
+  }
+]

@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="HistorialMedico.aspx.cs" Inherits="ProyectoFinalP_PrograIII.HistorialMedico" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-     <p class="text-center">
+     <p class="text-center" style="text-align: center">
         <br />
         <span style="font-size: larger; text-align: center; font-weight: 700">_______________ Historial Pacientes _______________</span></p>
     <p>

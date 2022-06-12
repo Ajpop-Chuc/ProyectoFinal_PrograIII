@@ -37,6 +37,7 @@ namespace ProyectoFinalP_PrograIII
             }
             else
             {
+                validacionContinudidadCita();
                 ButtonAgregarReceta.Visible = true;
                 ButtonAgregarSintoma.Visible = true;
                 ButtonGuardarConsulta.Visible = true;
@@ -80,13 +81,18 @@ namespace ProyectoFinalP_PrograIII
             datosConsultaAux.Diagnostico = TextBoxDiagnostico.Text;
             datosConsultaAux.Tratamiento = TextBoxTratamiento.Text;
             //recetas -> ya
+            datosConsultaAux.ProxCita = false;
+            if (RadioButton1.Checked)
+                datosConsultaAux.ProxCita = true;
+            
             datosConsultaAux.precioConsulta = Convert.ToDouble(TextBoxCosto.Text);
             string archivo = "~/imagenes/" + FileUploadImagen.FileName;
             datosConsultaAux.imgenesConsulta = archivo;
 
             ConsultaPaciente.NitPaciente = TextBoxNit.Text;
             ConsultaPaciente.ListaDatosConsulta.Add(datosConsultaAux);
-
+            
+            
             if (historialPaciente.listaHistorialPciente.Find(x => x.NitPaciente == TextBoxNit.Text) == null)
             {
                 historialPaciente.listaHistorialPciente.Add(ConsultaPaciente);
@@ -167,6 +173,20 @@ namespace ProyectoFinalP_PrograIII
                         
 
             return ID;
+        }
+        
+        protected void validacionContinudidadCita()
+        {
+            historialPaciente historial = historialPaciente.listaHistorialPciente.Find(x => x.NitPaciente == TextBoxNit.Text);
+            int capacidad = historial.ListaDatosConsulta.Count();
+            DatosConsultaAux datos = historial.ListaDatosConsulta[capacidad - 1];
+            if (datos.ProxCita== true){
+                Label1.Text = "Esta Consulta es una Continuidad de la Consulta 'ID: " + datos.idConsulta + "' Creada El " + datos.fechaConsulta;
+            }
+        }
+        protected void RadioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
