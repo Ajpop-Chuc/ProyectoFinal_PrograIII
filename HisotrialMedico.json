@@ -1,1 +1,91 @@
-[{"NitPaciente":"Nit 1","ListaDatosConsulta":[{"idConsulta":"Nit 1A110","fechaConsulta":"2022-06-11T00:00:00-06:00","horaCita":"22","Temperatura":"100","Presion":"100","Diagnostico":"cualquier cosa","Tratamiento":"cualquier \r\ncosa","ProxCita":true,"precioConsulta":2600.8,"imgenesConsulta":"~/imagenes/1.jpg","Sintomas":["codigo sintoma 1","codigo sintoma 3"],"Receta":[{"Medicamento":"codigo medicamento 2","Dosis":"250","HorarioAdmin":"8"}]}]},{"NitPaciente":"Nit 2","ListaDatosConsulta":[{"idConsulta":"Nit 2A110","fechaConsulta":"2022-06-11T00:00:00-06:00","horaCita":"22","Temperatura":"100","Presion":"100","Diagnostico":"cualquier cosa","Tratamiento":"cualquier cosa","ProxCita":false,"precioConsulta":3500.8,"imgenesConsulta":"~/imagenes/","Sintomas":["codigo sintoma 1","codigo sintoma 3","codigo sintoma 2"],"Receta":[{"Medicamento":"codigo medicamento 2","Dosis":"250","HorarioAdmin":"8"},{"Medicamento":"codigo medicamento 1","Dosis":"250","HorarioAdmin":"9"}]},{"idConsulta":"Nit 2A19","fechaConsulta":"2022-06-11T00:00:00-06:00","horaCita":"22","Temperatura":"100","Presion":"100","Diagnostico":"cualquier cosa","Tratamiento":"cualquier \r\ncosa","ProxCita":false,"precioConsulta":1000.0,"imgenesConsulta":"~/imagenes/","Sintomas":["codigo sintoma 1","codigo sintoma 3","codigo sintoma 2","codigo sintoma 1"],"Receta":[{"Medicamento":"codigo medicamento 2","Dosis":"250","HorarioAdmin":"8"},{"Medicamento":"codigo medicamento 1","Dosis":"250","HorarioAdmin":"9"},{"Medicamento":"codigo medicamento 2","Dosis":"2","HorarioAdmin":"9"}]}]},{"NitPaciente":"Nit 3","ListaDatosConsulta":[]}]
+[
+  {
+    "NitPaciente": "Nit 1",
+    "ListaDatosConsulta": [
+      {
+        "idConsulta": "Nit 1A110",
+        "fechaConsulta": "2022-06-11T00:00:00-06:00",
+        "horaCita": "22",
+        "Temperatura": "100",
+        "Presion": "100",
+        "Diagnostico": "cualquier cosa",
+        "Tratamiento": "cualquier \r\ncosa",
+        "ProxCita": true,
+        "precioConsulta": 2600.8,
+        "imgenesConsulta": "~/imagenes/1.jpg",
+        "Sintomas": [ "codigo sintoma 1", "codigo sintoma 3" ],
+        "Receta": [
+          {
+            "Medicamento": "codigo medicamento 2",
+            "Dosis": "250",
+            "HorarioAdmin": "8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "NitPaciente": "Nit 2",
+    "ListaDatosConsulta": [
+      {
+        "idConsulta": "Nit 2A110",
+        "fechaConsulta": "2022-06-11T00:00:00-06:00",
+        "horaCita": "22",
+        "Temperatura": "100",
+        "Presion": "100",
+        "Diagnostico": "cualquier cosa",
+        "Tratamiento": "cualquier cosa",
+        "ProxCita": false,
+        "precioConsulta": 3500.8,
+        "imgenesConsulta": "~/imagenes/",
+        "Sintomas": [ "codigo sintoma 1", "codigo sintoma 3", "codigo sintoma 2" ],
+        "Receta": [
+          {
+            "Medicamento": "codigo medicamento 2",
+            "Dosis": "250",
+            "HorarioAdmin": "8"
+          },
+          {
+            "Medicamento": "codigo medicamento 1",
+            "Dosis": "250",
+            "HorarioAdmin": "9"
+          }
+        ]
+      },
+      {
+        "idConsulta": "Nit 2A19",
+        "fechaConsulta": "2022-06-11T00:00:00-06:00",
+        "horaCita": "22",
+        "Temperatura": "100",
+        "Presion": "100",
+        "Diagnostico": "cualquier cosa",
+        "Tratamiento": "cualquier \r\ncosa",
+        "ProxCita": false,
+        "precioConsulta": 1000.0,
+        "imgenesConsulta": "~/imagenes/",
+        "Sintomas": [ "codigo sintoma 1", "codigo sintoma 3", "codigo sintoma 2", "codigo sintoma 1" ],
+        "Receta": [
+          {
+            "Medicamento": "codigo medicamento 2",
+            "Dosis": "250",
+            "HorarioAdmin": "8"
+          },
+          {
+            "Medicamento": "codigo medicamento 1",
+            "Dosis": "250",
+            "HorarioAdmin": "9"
+          },
+          {
+            "Medicamento": "codigo medicamento 2",
+            "Dosis": "2",
+            "HorarioAdmin": "9"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "NitPaciente": "Nit 3",
+    "ListaDatosConsulta": []
+  }
+]

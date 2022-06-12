@@ -1,14 +1,14 @@
 [
   {
-    "Enfermedad": "",
-    "VecesDiagnosticada": 1
+    "Enfermedad": "codigo sintoma 1",
+    "VecesDiagnosticada": 2
   },
   {
-    "Enfermedad": "",
-    "VecesDiagnosticada": 1
+    "Enfermedad": "codigo sintoma 3",
+    "VecesDiagnosticada": 2
   },
   {
-    "Enfermedad": "",
+    "Enfermedad": "codigo sintoma 2",
     "VecesDiagnosticada": 1
   },
   {

@@ -1,1 +1,19 @@
-[{"FechaCita":"2022-06-14T00:00:00","ListaCitas":[{"NitPaceinte":"Nit 1","horarioConsulta":"10 - 11"},{"NitPaceinte":"Nit 3","horarioConsulta":"8 - 9"},{"NitPaceinte":"Nit 2","horarioConsulta":"14 - 15"}]}]
+[
+  {
+    "FechaCita": "2022-06-07T00:00:00",
+    "ListaCitas": [
+      {
+        "NitPaceinte": "Nit 1",
+        "horarioConsulta": "10 - 11"
+      },
+      {
+        "NitPaceinte": "Nit 3",
+        "horarioConsulta": "8 - 9"
+      },
+      {
+        "NitPaceinte": "Nit 2",
+        "horarioConsulta": "14 - 15"
+      }
+    ]
+  }
+]
